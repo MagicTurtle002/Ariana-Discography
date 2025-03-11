@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariana Grande Discography</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Ariana Grande Discography</h1>
+    </header>
+
+    <main>
+        <div class="album-grid">
+            <div class="album" onclick="openAlbum('yours-truly')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Yours_Truly_Ariana_Grande.png" alt="Yours Truly">
+                <div class="album-info">
+                    <h2>Yours Truly</h2>
+                    <p>2013 • Pop, R&B</p>
+                </div>
+            </div>
+
+            <div class="album" onclick="openAlbum('my-everything')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/8/88/Ariana_Grande_My_Everything_2014_album_artwork.png" alt="My Everything">
+                <div class="album-info">
+                    <h2>My Everything</h2>
+                    <p>2014 • Pop, EDM</p>
+                </div>
+            </div>
+
+            <div class="album" onclick="openAlbum('dangerous-woman')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Dangerous_Woman_album_cover.png" alt="Dangerous Woman">
+                <div class="album-info">
+                    <h2>Dangerous Woman</h2>
+                    <p>2016 • Pop, R&B</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Album Modal -->
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="album-title"></h2>
+            <img id="album-cover" src="" alt="">
+            <p id="album-year"></p>
+            <ul id="tracklist"></ul>
+            <audio id="music-player" controls>
+                <source id="music-source" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buy-links">
+                <a id="spotify-link" href="#" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                <a id="apple-link" href="#" target="_blank"><i class="fab fa-apple"></i> Apple Music</a>
+                <a id="amazon-link" href="#" target="_blank"><i class="fab fa-amazon"></i> Amazon</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
